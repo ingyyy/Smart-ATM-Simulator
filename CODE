@@ -1,0 +1,26 @@
+passw = 1234
+z = False
+balance = 5000 
+print("Welcome , Nice to see you ")
+inppass = int(input("enter the password please :  "))
+if inppass == passw :
+    print("correct password , please choose your next step 1.withdraw 2.check balance")
+    operation = input("1.withdraw 2.check balance : ")
+    while z == False:     
+        if operation == '1': 
+            z = True
+            withd = int(input("Enter the amount you want to withdraw : "))
+            if withd <= balance:
+                balance = balance - withd
+                print("Done , your balance now is{balance}" )
+            else :
+                print("you can't withdraw this amount of money , it's more than your balance")
+        elif operation == '2':
+            z = True
+            print(f"Your balance is : {balance}")
+        else :
+            print("Please enter a valid choice : 1.withdraw 2.check balance ")
+            operation = input("1.withdraw 2.check balance : ")
+
+else :
+    print("Wrong passwordpass , Bye ")
